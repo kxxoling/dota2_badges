@@ -18,5 +18,5 @@ Running
 
 Now you can run ``./manage.py runserver`` and open link like ``http://localhost:8000/121230511/mmr.svg`` to get your MMR badge:
 
-.. image:: mmr.svg
+.. image:: https://cdn.rawgit.com/kxxoling/dota2_badges/master/mmr.svg
 
