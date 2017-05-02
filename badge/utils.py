@@ -13,7 +13,6 @@ def get_mmr(steam_id):
     if cached_mmr:
         return cached_mmr
     profile = request_profile(steam_id)
-    print(profile)
     mmr = profile.json().get('solo_competitive_rank', None)
     cache.set_mmr(steam_id, mmr)
     return mmr
