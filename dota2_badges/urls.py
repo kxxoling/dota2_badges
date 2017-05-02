@@ -1,24 +1,9 @@
-"""dota2_badges URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.10/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
 from django.conf.urls import url
-# from django.contrib import admin
-from badge.views import render_badge
+from badge.views import render_solo_mmr_badge, render_team_mmr_badge, render_estimate_mmr_badge
 
 
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
-    url(r'^(?P<steam_id>[0-9]+)/mmr.svg$', render_badge),
+    url(r'^(?P<steam_id>[0-9]+)/mmr/solo.svg$', render_solo_mmr_badge),
+    url(r'^(?P<steam_id>[0-9]+)/mmr/team.svg$', render_team_mmr_badge),
+    url(r'^(?P<steam_id>[0-9]+)/mmr/estimate.svg$', render_estimate_mmr_badge),
 ]
