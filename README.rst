@@ -20,3 +20,12 @@ Now you can run ``./manage.py runserver`` and open link like ``http://localhost:
 
 .. image:: https://cdn.rawgit.com/kxxoling/dota2_badges/master/mmr.svg
 
+Online demo:
+
+- Solo MMR:
+.. image:: http://dota.home.windrunner.me:14000/121230511/mmr/solo.svg
+- Team MMR:
+.. image:: http://dota.home.windrunner.me:14000/121230511/mmr/team.svg
+- Estimated MMR:
+.. image:: http://dota.home.windrunner.me:14000/121230511/mmr/estimate.svg
+
