@@ -4,7 +4,10 @@ import sys
 
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dota2_badges.settings.dev")
+    if os.environ.get('PROD'):
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dota2_badges.settings.prod")
+    else:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dota2_badges.settings.dev")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:
